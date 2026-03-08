@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8CC6A"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="64" height="64" rx="12" fill="#060F1A"/>
+
+  <!-- Square 1 (navy + gold border) -->
+  <rect x="6" y="8" width="28" height="28" rx="6" fill="#0F2A44" stroke="#D4AF37" stroke-width="2"/>
+
+  <!-- Square 2 (offset, ghost) -->
+  <rect x="22" y="20" width="28" height="28" rx="6" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.45"/>
+
+  <!-- Gold accent block inside square 1 -->
+  <rect x="12" y="14" width="10" height="10" rx="2" fill="url(#gold)"/>
+
+  <!-- Center intersection dot -->
+  <circle cx="36" cy="36" r="5" fill="url(#gold)"/>
+</svg>

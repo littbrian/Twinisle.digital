@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TwinIsle Digital — Building Digital Foundations</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Ambient Orbs -->
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav>
+  <a href="#" class="nav-logo" aria-label="TwinIsle Digital Home">
+    <div class="logo-mark">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="4" y="8" width="14" height="14" rx="3" fill="#0F2A44" stroke="#D4AF37" stroke-width="1.2"/>
+        <rect x="18" y="14" width="14" height="14" rx="3" fill="#D4AF37" fill-opacity="0.15" stroke="#D4AF37" stroke-width="1.2"/>
+        <circle cx="18" cy="18" r="3" fill="#D4AF37"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span>TwinIsle</span>
+      <span>Digital</span>
+    </div>
+  </a>
+
+  <ul class="nav-links" role="navigation" aria-label="Primary navigation">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#cta" class="nav-cta">Start a Project</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-left">
+    <div class="hero-tag">Based in Trinidad &amp; Tobago</div>
+    <h1 class="hero-h1">Digital products<br>built to <em>scale.</em></h1>
+    <p class="hero-sub">We design and develop fast, visually striking websites and digital platforms that help Caribbean brands stand out and grow online.</p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn-primary">Start a Project</a>
+      <a href="#work" class="btn-ghost">View Our Work</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">5<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3<span>×</span></div>
+        <div class="stat-label">Avg. Performance Lift</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-card hero-card-main">
+      <div class="card-grid-bg"></div>
+      <div class="card-dots">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+      </div>
+      <div class="card-label">// Current Build</div>
+      <div class="card-title">TwinIsle Market<br>v2.0 — Live</div>
+    </div>
+    <div class="hero-card hero-card-float">
+      <div class="float-label">Performance Score</div>
+      <div class="float-value">98</div>
+      <div class="float-sub">Google PageSpeed ↑</div>
+    </div>
+    <div class="hero-card hero-card-badge">
+      <div class="badge-icon">🇹🇹</div>
+      <div class="badge-text">Caribbean-First Design</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MARQUEE
+     ============================================ -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><div class="marquee-dot"></div>Web Development</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>E-Commerce</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>UI/UX Design</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Digital Strategy</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Brand Identity</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Performance Optimization</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Systems Integration</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>WordPress &amp; WooCommerce</div>
+    <!-- Duplicated for seamless loop -->
+    <div class="marquee-item"><div class="marquee-dot"></div>Web Development</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>E-Commerce</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>UI/UX Design</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Digital Strategy</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Brand Identity</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Performance Optimization</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Systems Integration</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>WordPress &amp; WooCommerce</div>
+  </div>
+</div>
+
+<!-- ============================================
+     SERVICES
+     ============================================ -->
+<section id="services" aria-label="Services">
+  <div class="services-header">
+    <div>
+      <div class="section-tag reveal">What We Build</div>
+      <h2 class="section-h2 reveal reveal-delay-1">Services built for <em>real growth</em></h2>
+    </div>
+    <p class="section-sub reveal reveal-delay-2">We don't just build websites. We build digital systems that solve real business problems and scale with your growth.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-icon">⚡</div>
+      <div class="service-name">Web Design &amp;<br>Development</div>
+      <p class="service-desc">High-performance websites built for speed, clarity, and conversion. No bloat, no compromise.</p>
+      <span class="service-arrow">→</span>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">02</div>
+      <div class="service-icon">🛒</div>
+      <div class="service-name">E-Commerce<br>Solutions</div>
+      <p class="service-desc">Scalable online stores designed to convert visitors into loyal customers, built on proven platforms.</p>
+      <span class="service-arrow">→</span>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">03</div>
+      <div class="service-icon">🎨</div>
+      <div class="service-name">Branding &amp;<br>UI Design</div>
+      <p class="service-desc">Clean, modern visual identities that communicate trust and differentiate you from competitors.</p>
+      <span class="service-arrow">→</span>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">04</div>
+      <div class="service-icon">🔧</div>
+      <div class="service-name">Web<br>Applications</div>
+      <p class="service-desc">Custom platforms and internal tools built around your workflows and business logic.</p>
+      <span class="service-arrow">→</span>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">05</div>
+      <div class="service-icon">⚙️</div>
+      <div class="service-name">Systems<br>Integration</div>
+      <p class="service-desc">Connecting your tools, APIs, and payment systems into one seamless, automated flow.</p>
+      <span class="service-arrow">→</span>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-num">06</div>
+      <div class="service-icon">📊</div>
+      <div class="service-name">Ongoing<br>Support</div>
+      <p class="service-desc">Long-term technical partnership to keep your digital presence fast, secure, and evolving.</p>
+      <span class="service-arrow">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WORK
+     ============================================ -->
+<section id="work" aria-label="Selected Work">
+  <div class="work-header reveal">
+    <div>
+      <div class="section-tag">Selected Work</div>
+      <h2 class="section-h2">Projects that <em>move</em> businesses</h2>
+    </div>
+    <a href="#" class="btn-ghost" style="flex-shrink:0">View All Projects</a>
+  </div>
+  <div class="work-grid reveal reveal-delay-1">
+    <div class="work-card">
+      <div class="work-img">🛍️</div>
+      <div class="work-overlay">
+        <div class="work-tag">Marketplace / E-Commerce</div>
+        <div class="work-title">TwinIsle Market</div>
+        <div class="work-desc">A full multi-vendor marketplace connecting Trinidad &amp; Tobago vendors with buyers island-wide.</div>
+        <a href="#" class="work-link">View Case Study →</a>
+      </div>
+    </div>
+    <div class="work-grid-right">
+      <div class="work-card work-card-sm">
+        <div class="work-img" style="font-size:40px">💳</div>
+        <div class="work-overlay">
+          <div class="work-tag">Fintech / Platform</div>
+          <div class="work-title">TwinIsle Pay</div>
+          <div class="work-desc">Digital wallet &amp; event payment infrastructure for Caribbean commerce.</div>
+          <a href="#" class="work-link">Coming Soon →</a>
+        </div>
+      </div>
+      <div class="work-card work-card-sm">
+        <div class="work-img" style="font-size:40px">🏢</div>
+        <div class="work-overlay">
+          <div class="work-tag">Corporate / Web</div>
+          <div class="work-title">Business Rebrand &amp; Site</div>
+          <div class="work-desc">Full identity redesign and website for a local SME — 3× enquiry rate increase.</div>
+          <a href="#" class="work-link">View Case Study →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PROCESS
+     ============================================ -->
+<section id="process" aria-label="Our Process">
+  <div class="process-layout">
+    <div>
+      <div class="section-tag reveal">How We Work</div>
+      <h2 class="section-h2 reveal reveal-delay-1">A clear<br>process.<br><em>Zero</em><br>surprises.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-name">Discover</div>
+          <p class="step-desc">We start by deeply understanding your business, goals, users, and technical landscape before a single pixel is touched.</p>
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-name">Strategy &amp; Design</div>
+          <p class="step-desc">We map the architecture and craft a visual direction that balances clarity, brand identity, and user experience.</p>
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-name">Build</div>
+          <p class="step-desc">Clean, scalable development using modern standards. Performance and security built in from day one, not bolted on later.</p>
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-name">Launch &amp; Support</div>
+          <p class="step-desc">Rigorous testing, smooth deployment, and ongoing technical partnership so your product keeps improving after launch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section id="about" aria-label="About">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-img-main">🇹🇹</div>
+      <div class="about-badge-tl">
+        <div class="about-badge-val">TT</div>
+        <div class="about-badge-lbl">Based in Chaguanas,<br>Trinidad &amp; Tobago</div>
+      </div>
+      <div class="about-line"></div>
+    </div>
+    <div class="about-content">
+      <div class="section-tag reveal">About TwinIsle Digital</div>
+      <h2 class="section-h2 reveal reveal-delay-1">Built in the islands.<br>Designed to <em>compete</em><br>globally.</h2>
+      <p class="about-body reveal reveal-delay-2">
+        TwinIsle Digital is a modern development studio based in <strong>Chaguanas, Trinidad &amp; Tobago</strong>. We build clean, scalable digital products for Caribbean businesses ready to compete at a global standard.
+      </p>
+      <p class="about-body reveal reveal-delay-3">
+        We understand local markets, local challenges, and local culture — because we live it. But we build to <strong>international standards</strong>, using the same tools and practices as the world's leading digital studios.
+      </p>
+      <div class="about-skills reveal reveal-delay-4">
+        <span class="skill-tag">WordPress</span>
+        <span class="skill-tag">WooCommerce</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Elementor Pro</span>
+        <span class="skill-tag">GSAP</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">PHP / Laravel</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Stripe / WiPay</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section id="testimonials" aria-label="Client Testimonials">
+  <div class="section-tag reveal" style="justify-content:center">Client Feedback</div>
+  <h2 class="section-h2 reveal reveal-delay-1" style="text-align:center;max-width:500px;margin:0 auto 8px">What clients<br><em>say about us</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">Working with TwinIsle Digital completely transformed how our business looks online. Professional, fast, and they actually understood what we needed.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩🏽</div>
+        <div>
+          <div class="author-name">Renée Baptiste</div>
+          <div class="author-role">Owner, Chaguanas Fashion Boutique</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">They delivered a complete e-commerce site in three weeks that actually works. Our online sales went from zero to consistent within the first month.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👨🏾</div>
+        <div>
+          <div class="author-name">Marcus Williams</div>
+          <div class="author-role">Founder, Local Food Brand</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">Finally a TT developer who thinks beyond just "make a website." They helped us think through the whole digital strategy, not just the design.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩🏾</div>
+        <div>
+          <div class="author-name">Aisha Mohammed</div>
+          <div class="author-role">Director, SME Consulting Firm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA
+     ============================================ -->
+<section id="cta" aria-label="Contact">
+  <div class="section-tag cta-tag reveal">Let's Work Together</div>
+  <h2 class="cta-h2 reveal reveal-delay-1">Ready to build<br>something <em>solid?</em></h2>
+  <p class="cta-sub reveal reveal-delay-2">Tell us about your project and we'll help you plan the right digital solution — no jargon, no pressure.</p>
+  <div class="cta-actions reveal reveal-delay-3">
+    <a href="mailto:hello@twinisledigital.com" class="btn-primary">Book a Free Consultation</a>
+    <a href="https://wa.me/18681234567" class="btn-ghost" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="nav-logo" style="margin-bottom:12px">
+      <div class="logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="8" width="14" height="14" rx="3" fill="#0F2A44" stroke="#D4AF37" stroke-width="1.2"/>
+          <rect x="18" y="14" width="14" height="14" rx="3" fill="#D4AF37" fill-opacity="0.15" stroke="#D4AF37" stroke-width="1.2"/>
+          <circle cx="18" cy="18" r="3" fill="#D4AF37"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span>TwinIsle</span>
+        <span>Digital</span>
+      </div>
+    </a>
+    <p class="footer-tagline">Building scalable digital<br>products from the Caribbean,<br>for the world.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Services</div>
+    <ul class="footer-links">
+      <li><a href="#services">Web Development</a></li>
+      <li><a href="#services">E-Commerce</a></li>
+      <li><a href="#services">UI/UX Design</a></li>
+      <li><a href="#services">Web Applications</a></li>
+      <li><a href="#services">Ongoing Support</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Products</div>
+    <ul class="footer-links">
+      <li><a href="#">TwinIsle Market</a></li>
+      <li><a href="#">TwinIsle Pay</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Contact</div>
+    <ul class="footer-links">
+      <li><a href="mailto:hello@twinisledigital.com">hello@twinisledigital.com</a></li>
+      <li><a href="https://wa.me/18681234567" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      <li><a href="#">Chaguanas, T&amp;T</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 TwinIsle Digital. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Script -->
+<script src="main.js"></script>
+
+</body>
+</html>
