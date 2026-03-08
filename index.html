@@ -3,20 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TwinIsle Digital — Building Digital Foundations</title>
+  <title>TwinIsle Digital — Web Design & Development | Trinidad & Tobago</title>
+  <meta name="description" content="TwinIsle Digital is a web design and development studio based in Chaguanas, Trinidad & Tobago. We build fast, scalable websites and digital products for Caribbean businesses.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://twinisle.digital/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TwinIsle Digital — Building Digital Foundations">
+  <meta property="og:description" content="Web design & development studio based in Trinidad & Tobago. We build fast, scalable digital products for Caribbean businesses.">
+  <meta property="og:url" content="https://twinisle.digital/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://twinisle.digital/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TwinIsle Digital — Building Digital Foundations">
+  <meta name="twitter:description" content="Web design & development studio based in Trinidad & Tobago.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+  <meta name="theme-color" content="#060F1A">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.ico" sizes="32x32">
-<link rel="apple-touch-icon" href="favicon-180.png">
-<meta name="theme-color" content="#060F1A">
-
-  
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -48,13 +62,18 @@
     </div>
   </a>
 
-  <ul class="nav-links" role="navigation" aria-label="Primary navigation">
+  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Primary navigation">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#cta" class="nav-cta">Start a Project</a></li>
   </ul>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ============================================
@@ -199,7 +218,7 @@
       <div class="section-tag">Selected Work</div>
       <h2 class="section-h2">Projects that <em>move</em> businesses</h2>
     </div>
-    <a href="#" class="btn-ghost" style="flex-shrink:0">View All Projects</a>
+    <span class="work-coming-soon">More case studies coming soon</span>
   </div>
   <div class="work-grid reveal reveal-delay-1">
     <div class="work-card">
@@ -208,7 +227,7 @@
         <div class="work-tag">Marketplace / E-Commerce</div>
         <div class="work-title">TwinIsle Market</div>
         <div class="work-desc">A full multi-vendor marketplace connecting Trinidad &amp; Tobago vendors with buyers island-wide.</div>
-        <a href="#" class="work-link">View Case Study →</a>
+        <span class="work-link work-link--muted">In Development</span>
       </div>
     </div>
     <div class="work-grid-right">
@@ -218,7 +237,7 @@
           <div class="work-tag">Fintech / Platform</div>
           <div class="work-title">TwinIsle Pay</div>
           <div class="work-desc">Digital wallet &amp; event payment infrastructure for Caribbean commerce.</div>
-          <a href="#" class="work-link">Coming Soon →</a>
+          <span class="work-link work-link--muted">Research Phase</span>
         </div>
       </div>
       <div class="work-card work-card-sm">
@@ -227,7 +246,7 @@
           <div class="work-tag">Corporate / Web</div>
           <div class="work-title">Business Rebrand &amp; Site</div>
           <div class="work-desc">Full identity redesign and website for a local SME — 3× enquiry rate increase.</div>
-          <a href="#" class="work-link">View Case Study →</a>
+          <span class="work-link work-link--muted">Case Study Coming Soon</span>
         </div>
       </div>
     </div>
@@ -365,7 +384,7 @@
   <h2 class="cta-h2 reveal reveal-delay-1">Ready to build<br>something <em>solid?</em></h2>
   <p class="cta-sub reveal reveal-delay-2">Tell us about your project and we'll help you plan the right digital solution — no jargon, no pressure.</p>
   <div class="cta-actions reveal reveal-delay-3">
-    <a href="mailto:hello@twinisledigital.com" class="btn-primary">Book a Free Consultation</a>
+    <a href="mailto:hello@twinisle.digital" class="btn-primary">Book a Free Consultation</a>
     <a href="https://wa.me/18681234567" class="btn-ghost" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
   </div>
 </section>
@@ -403,24 +422,22 @@
   <div>
     <div class="footer-col-title">Products</div>
     <ul class="footer-links">
-      <li><a href="#">TwinIsle Market</a></li>
-      <li><a href="#">TwinIsle Pay</a></li>
+      <li><a href="#">TwinIsle Market <span style="font-size:10px;color:var(--gold);letter-spacing:.1em;">SOON</span></a></li>
+      <li><a href="#">TwinIsle Pay <span style="font-size:10px;color:var(--gold);letter-spacing:.1em;">SOON</span></a></li>
     </ul>
   </div>
   <div>
     <div class="footer-col-title">Contact</div>
     <ul class="footer-links">
-      <li><a href="mailto:hello@twinisledigital.com">hello@twinisledigital.com</a></li>
-      <li><a href="https://wa.me/18681234567" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-      <li><a href="#">Chaguanas, T&amp;T</a></li>
+      <li><a href="mailto:hello@twinisle.digital">hello@twinisle.digital</a></li>
+      <li><a href="https://wa.me/18681234567" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
+      <li><span style="color:var(--slate)">Chaguanas, T&amp;T</span></li>
     </ul>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2025 TwinIsle Digital. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 TwinIsle Digital. All rights reserved.</p>
     <div class="footer-social">
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Facebook</a>
+      <span style="font-size:12px;color:var(--slate);font-style:italic;opacity:0.5;">Social links coming soon</span>
     </div>
   </div>
 </footer>
