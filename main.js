@@ -51,27 +51,21 @@ document.addEventListener('DOMContentLoaded', function () {
       const isOpen = navLinks.classList.toggle('open');
       navToggle.classList.toggle('open', isOpen);
       navToggle.setAttribute('aria-expanded', isOpen);
-      // Prevent body scroll when menu open
-      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close menu on any nav link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         navToggle.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
       });
     });
 
-    // Close menu on Escape key
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && navLinks.classList.contains('open')) {
         navLinks.classList.remove('open');
         navToggle.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
         navToggle.focus();
       }
     });
@@ -87,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.1 });
     revealEls.forEach(el => observer.observe(el));
   } else {
-    // Fallback for older browsers
     revealEls.forEach(el => el.classList.add('visible'));
   }
 
@@ -107,8 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        const offset = 80; // account for fixed nav height
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
