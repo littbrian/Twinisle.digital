@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TwinIsle Digital — Web Design & Development | Trinidad & Tobago</title>
-  <meta name="description" content="TwinIsle Digital is a web design and development studio based in Chaguanas, Trinidad & Tobago. We build fast, scalable websites and digital products for Caribbean businesses.">
+  <title>TwinIsle Digital — AI & Automation for Caribbean Businesses</title>
+  <meta name="description" content="We help Caribbean businesses automate their operations and grow using AI — without needing a tech team. Based in Trinidad & Tobago.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://twinisle.digital/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="TwinIsle Digital — Building Digital Foundations">
-  <meta property="og:description" content="Web design & development studio based in Trinidad & Tobago. We build fast, scalable digital products for Caribbean businesses.">
+  <meta property="og:title" content="TwinIsle Digital — AI & Automation for Caribbean Businesses">
+  <meta property="og:description" content="We help Caribbean businesses automate their operations and grow using AI. Based in Trinidad & Tobago.">
   <meta property="og:url" content="https://twinisle.digital/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://twinisle.digital/og-image.png">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TwinIsle Digital — Building Digital Foundations">
-  <meta name="twitter:description" content="Web design & development studio based in Trinidad & Tobago.">
-
-  <!-- Favicon -->
+  <meta name="twitter:title" content="TwinIsle Digital — AI & Automation">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="32x32">
-  <link rel="apple-touch-icon" href="favicon-180.png">
   <meta name="theme-color" content="#060F1A">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Custom Cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
-<!-- Ambient Orbs -->
 <div class="orb orb-1" aria-hidden="true"></div>
 <div class="orb orb-2" aria-hidden="true"></div>
 
-<!-- ============================================
-     NAVIGATION
-     ============================================ -->
+<!-- Animated grid bg -->
+<div class="grid-bg" aria-hidden="true"></div>
+
+<!-- ── NAV ── -->
 <nav>
   <a href="#" class="nav-logo" aria-label="TwinIsle Digital Home">
     <div class="logo-mark">
@@ -61,50 +45,46 @@
       <span>Digital</span>
     </div>
   </a>
-
   <ul class="nav-links" id="navLinks" role="navigation" aria-label="Primary navigation">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#cta" class="nav-cta">Start a Project</a></li>
+    <li><a href="#cta" class="nav-cta">Book a Free Audit</a></li>
   </ul>
-
-  <!-- Mobile hamburger -->
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- ============================================
-     HERO
-     ============================================ -->
+<!-- ── HERO ── -->
 <section id="hero" aria-label="Hero">
   <div class="hero-left">
     <div class="hero-tag">Based in Trinidad &amp; Tobago</div>
-    <h1 class="hero-h1">Digital products<br>built to <em>scale.</em></h1>
-    <p class="hero-sub">We design and develop fast, visually striking websites and digital platforms that help Caribbean brands stand out and grow online.</p>
+    <h1 class="hero-h1">Stop doing manually<br>what <em>AI can do</em><br>in seconds.</h1>
+    <p class="hero-sub">We automate Caribbean businesses using AI — saving time, reducing costs, and unlocking growth without needing an in-house tech team.</p>
     <div class="hero-actions">
-      <a href="#cta" class="btn-primary">Start a Project</a>
-      <a href="#work" class="btn-ghost">View Our Work</a>
+      <a href="#cta" class="btn-primary">Book a Free AI Audit</a>
+      <a href="#services" class="btn-ghost">See What We Automate</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">5<span>+</span></div>
-        <div class="stat-label">Years Experience</div>
+        <div class="stat-num">15<span>hrs</span></div>
+        <div class="stat-label">Saved per week avg.</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">30<span>+</span></div>
-        <div class="stat-label">Projects Delivered</div>
+        <div class="stat-num">24<span>/7</span></div>
+        <div class="stat-label">AI works while you sleep</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">3<span>×</span></div>
-        <div class="stat-label">Avg. Performance Lift</div>
+        <div class="stat-label">Faster response times</div>
       </div>
     </div>
   </div>
 
   <div class="hero-visual" aria-hidden="true">
+    <!-- Animated AI terminal card -->
     <div class="hero-card hero-card-main">
       <div class="card-grid-bg"></div>
       <div class="card-dots">
@@ -112,111 +92,166 @@
         <div class="dot dot-y"></div>
         <div class="dot dot-g"></div>
       </div>
-      <div class="card-label">// Current Build</div>
-      <div class="card-title">TwinIsle Market<br>v2.0 — Live</div>
+      <div class="card-label">// AI Assistant — Active</div>
+      <div class="terminal-lines">
+        <div class="t-line t-line-1"><span class="t-prompt">›</span> Incoming WhatsApp enquiry</div>
+        <div class="t-line t-line-2"><span class="t-prompt t-ai">AI</span> Generating quote...</div>
+        <div class="t-line t-line-3"><span class="t-prompt t-ai">AI</span> Quote sent in 2.3s ✓</div>
+        <div class="t-line t-line-4"><span class="t-prompt">›</span> Lead captured to CRM ✓</div>
+        <div class="t-cursor">▋</div>
+      </div>
     </div>
     <div class="hero-card hero-card-float">
-      <div class="float-label">Performance Score</div>
-      <div class="float-value">98</div>
-      <div class="float-sub">Google PageSpeed ↑</div>
+      <div class="float-label">Time Saved Today</div>
+      <div class="float-value" id="timeSaved">4.2h</div>
+      <div class="float-sub">Across 3 automations ↑</div>
     </div>
     <div class="hero-card hero-card-badge">
       <div class="badge-icon">🇹🇹</div>
-      <div class="badge-text">Caribbean-First Design</div>
+      <div class="badge-text">Caribbean-First AI</div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     MARQUEE
-     ============================================ -->
+<!-- ── MARQUEE ── -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
+    <div class="marquee-item"><div class="marquee-dot"></div>AI Automation</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>WhatsApp AI</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Workflow Automation</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Web Development</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>E-Commerce</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>UI/UX Design</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Digital Strategy</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Brand Identity</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Performance Optimization</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Lead Generation</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Systems Integration</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>WordPress &amp; WooCommerce</div>
-    <!-- Duplicated for seamless loop -->
+    <div class="marquee-item"><div class="marquee-dot"></div>AI Assistants</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Process Automation</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>AI Automation</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>WhatsApp AI</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Workflow Automation</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Web Development</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>E-Commerce</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>UI/UX Design</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Digital Strategy</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Brand Identity</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Performance Optimization</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Lead Generation</div>
     <div class="marquee-item"><div class="marquee-dot"></div>Systems Integration</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>WordPress &amp; WooCommerce</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>AI Assistants</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Process Automation</div>
   </div>
 </div>
 
-<!-- ============================================
-     SERVICES
-     ============================================ -->
+<!-- ── PROBLEM SECTION ── -->
+<section id="problem" aria-label="The Problem">
+  <div class="problem-header">
+    <div class="section-tag reveal">Sound Familiar?</div>
+    <h2 class="section-h2 reveal reveal-delay-1">Your business is losing<br>hours every single day</h2>
+  </div>
+  <div class="problems-grid">
+    <div class="problem-card reveal">
+      <div class="problem-icon">💬</div>
+      <div class="problem-text">"I spend half my day answering the same WhatsApp questions"</div>
+    </div>
+    <div class="problem-card reveal reveal-delay-1">
+      <div class="problem-icon">📋</div>
+      <div class="problem-text">"We lose leads because nobody follows up fast enough"</div>
+    </div>
+    <div class="problem-card reveal reveal-delay-2">
+      <div class="problem-icon">📄</div>
+      <div class="problem-text">"Making quotes and invoices manually takes forever"</div>
+    </div>
+    <div class="problem-card reveal reveal-delay-1">
+      <div class="problem-icon">📱</div>
+      <div class="problem-text">"I have no time to post on social media consistently"</div>
+    </div>
+    <div class="problem-card reveal reveal-delay-2">
+      <div class="problem-icon">📊</div>
+      <div class="problem-text">"My staff waste time on data entry that should be automatic"</div>
+    </div>
+    <div class="problem-card reveal reveal-delay-3">
+      <div class="problem-icon">🌙</div>
+      <div class="problem-text">"When I'm not working, the business basically stops"</div>
+    </div>
+  </div>
+  <div class="problem-cta reveal reveal-delay-2">
+    <p class="problem-answer">All of these can be automated. <em>We'll show you how.</em></p>
+    <a href="#cta" class="btn-primary">Book a Free AI Audit</a>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
 <section id="services" aria-label="Services">
   <div class="services-header">
     <div>
       <div class="section-tag reveal">What We Build</div>
-      <h2 class="section-h2 reveal reveal-delay-1">Services built for <em>real growth</em></h2>
+      <h2 class="section-h2 reveal reveal-delay-1">AI solutions built for<br><em>real Caribbean businesses</em></h2>
     </div>
-    <p class="section-sub reveal reveal-delay-2">We don't just build websites. We build digital systems that solve real business problems and scale with your growth.</p>
+    <p class="section-sub reveal reveal-delay-2">We translate complex AI technology into practical tools that solve the problems your business faces every day.</p>
   </div>
   <div class="services-grid">
     <div class="service-card reveal">
       <div class="service-num">01</div>
-      <div class="service-icon">⚡</div>
-      <div class="service-name">Web Design &amp;<br>Development</div>
-      <p class="service-desc">High-performance websites built for speed, clarity, and conversion. No bloat, no compromise.</p>
+      <div class="service-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="service-name">WhatsApp<br>AI Assistant</div>
+      <p class="service-desc">An AI that answers customer questions, sends quotes, and books appointments on WhatsApp — 24/7, without you touching your phone.</p>
+      <div class="service-outcome">Saves 10+ hrs/week</div>
       <span class="service-arrow">→</span>
     </div>
     <div class="service-card reveal reveal-delay-1">
       <div class="service-num">02</div>
-      <div class="service-icon">🛒</div>
-      <div class="service-name">E-Commerce<br>Solutions</div>
-      <p class="service-desc">Scalable online stores designed to convert visitors into loyal customers, built on proven platforms.</p>
+      <div class="service-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="service-name">Lead Follow-Up<br>Automation</div>
+      <p class="service-desc">Automatically capture leads from Facebook, Instagram, or your website and follow up via WhatsApp before they go cold.</p>
+      <div class="service-outcome">3× more conversions</div>
       <span class="service-arrow">→</span>
     </div>
     <div class="service-card reveal reveal-delay-2">
       <div class="service-num">03</div>
-      <div class="service-icon">🎨</div>
-      <div class="service-name">Branding &amp;<br>UI Design</div>
-      <p class="service-desc">Clean, modern visual identities that communicate trust and differentiate you from competitors.</p>
+      <div class="service-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="service-name">Document<br>Automation</div>
+      <p class="service-desc">Quotes, invoices, contracts and proposals generated in seconds — not hours. Branded, accurate, and sent automatically.</p>
+      <div class="service-outcome">From 2 days to 2 minutes</div>
       <span class="service-arrow">→</span>
     </div>
     <div class="service-card reveal reveal-delay-1">
       <div class="service-num">04</div>
-      <div class="service-icon">🔧</div>
-      <div class="service-name">Web<br>Applications</div>
-      <p class="service-desc">Custom platforms and internal tools built around your workflows and business logic.</p>
+      <div class="service-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+      </div>
+      <div class="service-name">AI-Powered<br>Web Apps</div>
+      <p class="service-desc">Custom platforms and tools built around your workflows — with AI baked in from day one, not bolted on later.</p>
+      <div class="service-outcome">Built to scale with you</div>
       <span class="service-arrow">→</span>
     </div>
     <div class="service-card reveal reveal-delay-2">
       <div class="service-num">05</div>
-      <div class="service-icon">⚙️</div>
-      <div class="service-name">Systems<br>Integration</div>
-      <p class="service-desc">Connecting your tools, APIs, and payment systems into one seamless, automated flow.</p>
+      <div class="service-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      </div>
+      <div class="service-name">Social Media<br>AI System</div>
+      <p class="service-desc">AI generates and schedules your social content weekly — consistent posting without you writing a single caption.</p>
+      <div class="service-outcome">5hrs/week back</div>
       <span class="service-arrow">→</span>
     </div>
     <div class="service-card reveal reveal-delay-3">
       <div class="service-num">06</div>
-      <div class="service-icon">📊</div>
-      <div class="service-name">Ongoing<br>Support</div>
-      <p class="service-desc">Long-term technical partnership to keep your digital presence fast, secure, and evolving.</p>
+      <div class="service-icon-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="service-name">Automation<br>Retainer</div>
+      <p class="service-desc">Ongoing AI strategy, system monitoring, and new automation builds each month — your business keeps improving without extra effort.</p>
+      <div class="service-outcome">From TT$3,000/month</div>
       <span class="service-arrow">→</span>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     WORK
-     ============================================ -->
+<!-- ── WORK ── -->
 <section id="work" aria-label="Selected Work">
   <div class="work-header reveal">
     <div>
       <div class="section-tag">Selected Work</div>
-      <h2 class="section-h2">Projects that <em>move</em> businesses</h2>
+      <h2 class="section-h2">Products we've<br><em>shipped</em></h2>
     </div>
     <span class="work-coming-soon">More case studies coming soon</span>
   </div>
@@ -246,6 +281,15 @@
     </div>
     <div class="work-grid-right">
       <div class="work-card work-card-sm">
+        <div class="work-img" style="font-size:40px">🔧</div>
+        <div class="work-overlay">
+          <div class="work-tag">Marketplace / T&T</div>
+          <div class="work-title">FixItTT</div>
+          <div class="work-desc">Trinidad &amp; Tobago's vetted tradesman directory — connecting homeowners with plumbers, electricians, AC techs and more via WhatsApp.</div>
+          <span class="work-link work-link--live">Live at fixittt.com</span>
+        </div>
+      </div>
+      <div class="work-card work-card-sm">
         <div class="work-img" style="font-size:40px">🛍️</div>
         <div class="work-overlay">
           <div class="work-tag">Marketplace / E-Commerce</div>
@@ -254,64 +298,51 @@
           <span class="work-link work-link--muted">In Development</span>
         </div>
       </div>
-      <div class="work-card work-card-sm">
-        <div class="work-img" style="font-size:40px">💳</div>
-        <div class="work-overlay">
-          <div class="work-tag">Fintech / Platform</div>
-          <div class="work-title">TwinIsle Pay</div>
-          <div class="work-desc">Digital wallet &amp; event payment infrastructure for Caribbean commerce.</div>
-          <span class="work-link work-link--muted">Research Phase</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     PROCESS
-     ============================================ -->
+<!-- ── PROCESS ── -->
 <section id="process" aria-label="Our Process">
   <div class="process-layout">
     <div>
       <div class="section-tag reveal">How We Work</div>
-      <h2 class="section-h2 reveal reveal-delay-1">A clear<br>process.<br><em>Zero</em><br>surprises.</h2>
+      <h2 class="section-h2 reveal reveal-delay-1">From problem<br>to automated<br><em>in weeks.</em></h2>
     </div>
     <div class="process-steps">
       <div class="process-step reveal">
         <div class="step-num">01</div>
         <div>
-          <div class="step-name">Discover</div>
-          <p class="step-desc">We start by deeply understanding your business, goals, users, and technical landscape before a single pixel is touched.</p>
+          <div class="step-name">Free AI Audit</div>
+          <p class="step-desc">We spend 30 minutes with you, map your workflows, and show you exactly where AI can save you the most time and money. No jargon, no pressure.</p>
         </div>
       </div>
       <div class="process-step reveal reveal-delay-1">
         <div class="step-num">02</div>
         <div>
-          <div class="step-name">Strategy &amp; Design</div>
-          <p class="step-desc">We map the architecture and craft a visual direction that balances clarity, brand identity, and user experience.</p>
+          <div class="step-name">Design the System</div>
+          <p class="step-desc">We design your automation architecture — which tools, which triggers, which AI models, and how everything connects to your existing setup.</p>
         </div>
       </div>
       <div class="process-step reveal reveal-delay-2">
         <div class="step-num">03</div>
         <div>
-          <div class="step-name">Build</div>
-          <p class="step-desc">Clean, scalable development using modern standards. Performance and security built in from day one, not bolted on later.</p>
+          <div class="step-name">Build &amp; Test</div>
+          <p class="step-desc">We build, test, and refine until the system works exactly as promised. You see it working before we hand it over.</p>
         </div>
       </div>
       <div class="process-step reveal reveal-delay-3">
         <div class="step-num">04</div>
         <div>
-          <div class="step-name">Launch &amp; Support</div>
-          <p class="step-desc">Rigorous testing, smooth deployment, and ongoing technical partnership so your product keeps improving after launch.</p>
+          <div class="step-name">Launch &amp; Improve</div>
+          <p class="step-desc">We go live, monitor performance, and keep optimising. Most clients see measurable time savings within the first week.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     ABOUT
-     ============================================ -->
+<!-- ── ABOUT ── -->
 <section id="about" aria-label="About">
   <div class="about-grid">
     <div class="about-visual reveal">
@@ -324,39 +355,37 @@
     </div>
     <div class="about-content">
       <div class="section-tag reveal">About TwinIsle Digital</div>
-      <h2 class="section-h2 reveal reveal-delay-1">Built in the islands.<br>Designed to <em>compete</em><br>globally.</h2>
+      <h2 class="section-h2 reveal reveal-delay-1">Caribbean roots.<br>Global-standard<br><em>AI solutions.</em></h2>
       <p class="about-body reveal reveal-delay-2">
-        TwinIsle Digital is a modern development studio based in <strong>Chaguanas, Trinidad &amp; Tobago</strong>. We build clean, scalable digital products for Caribbean businesses ready to compete at a global standard.
+        TwinIsle Digital is an AI and automation studio based in <strong>Chaguanas, Trinidad &amp; Tobago</strong>. We help Caribbean businesses stop losing time to manual work and start growing with intelligent systems.
       </p>
       <p class="about-body reveal reveal-delay-3">
-        We understand local markets, local challenges, and local culture — because we live it. But we build to <strong>international standards</strong>, using the same tools and practices as the world's leading digital studios.
+        We understand local businesses, local challenges, and local culture — because we live it. And we build to <strong>international standards</strong>, using the same AI tools used by leading companies worldwide — just applied to Caribbean problems.
       </p>
       <div class="about-skills reveal reveal-delay-4">
-        <span class="skill-tag">WordPress</span>
-        <span class="skill-tag">WooCommerce</span>
+        <span class="skill-tag">Claude AI</span>
+        <span class="skill-tag">GPT-4</span>
+        <span class="skill-tag">n8n</span>
+        <span class="skill-tag">Make</span>
+        <span class="skill-tag">WhatsApp API</span>
         <span class="skill-tag">React</span>
+        <span class="skill-tag">Supabase</span>
         <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Elementor Pro</span>
-        <span class="skill-tag">GSAP</span>
-        <span class="skill-tag">Figma</span>
-        <span class="skill-tag">PHP / Laravel</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Stripe / WiPay</span>
+        <span class="skill-tag">Zapier</span>
+        <span class="skill-tag">WiPay</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     TESTIMONIALS
-    
+<!-- ── TESTIMONIALS ── -->
 <section id="testimonials" aria-label="Client Testimonials">
   <div class="section-tag reveal" style="justify-content:center">Client Feedback</div>
   <h2 class="section-h2 reveal reveal-delay-1" style="text-align:center;max-width:500px;margin:0 auto 8px">What clients<br><em>say about us</em></h2>
   <div class="testimonials-grid">
     <div class="testimonial-card reveal">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Working with TwinIsle Digital completely transformed how our business looks online. Professional, fast, and they actually understood what we needed.</p>
+      <p class="testimonial-text">TwinIsle Digital completely transformed how we handle customer enquiries. We went from spending 3 hours a day on WhatsApp to checking in once in the morning. The AI handles the rest.</p>
       <div class="testimonial-author">
         <div class="author-avatar">👩🏽</div>
         <div>
@@ -367,7 +396,7 @@
     </div>
     <div class="testimonial-card reveal reveal-delay-1">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">They delivered a complete e-commerce site in three weeks that actually works. Our online sales went from zero to consistent within the first month.</p>
+      <p class="testimonial-text">Our quote turnaround went from two days to under three minutes. We're closing deals we used to lose simply because we couldn't respond fast enough.</p>
       <div class="testimonial-author">
         <div class="author-avatar">👨🏾</div>
         <div>
@@ -378,7 +407,7 @@
     </div>
     <div class="testimonial-card reveal reveal-delay-2">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Finally a TT developer who thinks beyond just "make a website." They helped us think through the whole digital strategy, not just the design.</p>
+      <p class="testimonial-text">Finally a T&T developer who thinks beyond just building a website. They helped us automate our entire client intake process. It runs itself now.</p>
       <div class="testimonial-author">
         <div class="author-avatar">👩🏾</div>
         <div>
@@ -390,23 +419,36 @@
   </div>
 </section>
 
-   ============================================ -->
-<!-- ============================================
-     CTA
-     ============================================ -->
+<!-- ── CTA ── -->
 <section id="cta" aria-label="Contact">
   <div class="section-tag cta-tag reveal">Let's Work Together</div>
-  <h2 class="cta-h2 reveal reveal-delay-1">Ready to build<br>something <em>solid?</em></h2>
-  <p class="cta-sub reveal reveal-delay-2">Tell us about your project and we'll help you plan the right digital solution — no jargon, no pressure.</p>
+  <h2 class="cta-h2 reveal reveal-delay-1">Book your free<br><em>AI Audit</em> today.</h2>
+  <p class="cta-sub reveal reveal-delay-2">We'll spend 30 minutes with you, map your biggest time-wasters, and show you exactly what we'd automate first — at no cost, no obligation.</p>
+  <div class="cta-features reveal reveal-delay-2">
+    <div class="cta-feature">
+      <span class="cta-feature-icon">✓</span>
+      <span>30-minute session</span>
+    </div>
+    <div class="cta-feature">
+      <span class="cta-feature-icon">✓</span>
+      <span>No obligation</span>
+    </div>
+    <div class="cta-feature">
+      <span class="cta-feature-icon">✓</span>
+      <span>Clear action plan</span>
+    </div>
+    <div class="cta-feature">
+      <span class="cta-feature-icon">✓</span>
+      <span>T&T focused</span>
+    </div>
+  </div>
   <div class="cta-actions reveal reveal-delay-3">
-    <a href="mailto:hello@twinisle.digital" class="btn-primary">Book a Free Consultation</a>
+    <a href="mailto:hello@twinisle.digital" class="btn-primary">Book Free AI Audit</a>
     <a href="https://wa.me/18681234567" class="btn-ghost" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
   </div>
 </section>
 
-<!-- ============================================
-     FOOTER
-     ============================================ -->
+<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-brand">
     <a href="#" class="nav-logo" style="margin-bottom:12px">
@@ -422,21 +464,22 @@
         <span>Digital</span>
       </div>
     </a>
-    <p class="footer-tagline">Building scalable digital<br>products from the Caribbean,<br>for the world.</p>
+    <p class="footer-tagline">AI &amp; automation for<br>Caribbean businesses.<br>Built in T&amp;T, built to scale.</p>
   </div>
   <div>
     <div class="footer-col-title">Services</div>
     <ul class="footer-links">
-      <li><a href="#services">Web Development</a></li>
-      <li><a href="#services">E-Commerce</a></li>
-      <li><a href="#services">UI/UX Design</a></li>
-      <li><a href="#services">Web Applications</a></li>
-      <li><a href="#services">Ongoing Support</a></li>
+      <li><a href="#services">WhatsApp AI Assistant</a></li>
+      <li><a href="#services">Lead Automation</a></li>
+      <li><a href="#services">Document Automation</a></li>
+      <li><a href="#services">AI Web Apps</a></li>
+      <li><a href="#services">Automation Retainer</a></li>
     </ul>
   </div>
   <div>
     <div class="footer-col-title">Products</div>
     <ul class="footer-links">
+      <li><a href="https://fixittt.com" target="_blank" rel="noopener noreferrer">FixItTT <span style="font-size:10px;color:var(--gold);letter-spacing:.1em;">LIVE</span></a></li>
       <li><a href="#">TwinIsle Market <span style="font-size:10px;color:var(--gold);letter-spacing:.1em;">SOON</span></a></li>
       <li><a href="#">TwinIsle Pay <span style="font-size:10px;color:var(--gold);letter-spacing:.1em;">SOON</span></a></li>
     </ul>
@@ -448,12 +491,9 @@
       <li><a href="https://wa.me/18681234567" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
       <li>
         <span style="color:var(--slate);display:inline-flex;align-items:center;gap:8px;">
-          <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;flex-shrink:0;display:block;">
-            <!-- Red field -->
+          <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;flex-shrink:0;">
             <rect width="22" height="14" fill="#CE1126"/>
-            <!-- White outline of stripe (top-left to bottom-right) -->
             <polygon points="3,0 9,0 19,14 13,14" fill="#FFFFFF"/>
-            <!-- Black stripe on top -->
             <polygon points="4.5,0 7.5,0 17.5,14 14.5,14" fill="#000000"/>
           </svg>
           Proudly Trinidad &amp; Tobago
@@ -469,8 +509,6 @@
   </div>
 </footer>
 
-<!-- Script -->
 <script src="main.js"></script>
-
 </body>
 </html>

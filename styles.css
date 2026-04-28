@@ -1120,3 +1120,245 @@ footer {
   .service-card { padding: 28px 20px; }
   .testimonial-card { padding: 28px 20px; }
 }
+
+/* ============================================
+   GRID BACKGROUND
+   ============================================ */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(212,175,55,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+}
+
+/* ============================================
+   TERMINAL CARD ANIMATIONS
+   ============================================ */
+.terminal-lines {
+  margin-top: 16px;
+  font-family: 'DM Sans', monospace;
+  font-size: 13px;
+}
+.t-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  opacity: 0;
+  transform: translateX(-8px);
+  color: rgba(247,244,238,0.75);
+  border-bottom: 1px solid rgba(247,244,238,0.05);
+}
+.t-line:last-of-type { border-bottom: none; }
+.t-line-1 { animation: termLine 0.4s ease forwards 1.2s; }
+.t-line-2 { animation: termLine 0.4s ease forwards 1.8s; }
+.t-line-3 { animation: termLine 0.4s ease forwards 2.4s; }
+.t-line-4 { animation: termLine 0.4s ease forwards 3.0s; }
+@keyframes termLine {
+  to { opacity: 1; transform: translateX(0); }
+}
+.t-prompt {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 24px;
+}
+.t-ai {
+  background: rgba(212,175,55,0.15);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+.t-cursor {
+  color: var(--gold);
+  animation: blink 1s step-end infinite;
+  font-size: 14px;
+  margin-top: 6px;
+  opacity: 0;
+  animation: blinkIn 1s step-end infinite 3.5s;
+}
+@keyframes blinkIn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================
+   PROBLEM SECTION
+   ============================================ */
+#problem {
+  padding: 120px 60px;
+  position: relative;
+  z-index: 1;
+}
+.problem-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+.problem-card {
+  background: rgba(15,42,68,0.3);
+  border: 1px solid rgba(247,244,238,0.06);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
+}
+.problem-card:hover {
+  border-color: rgba(212,175,55,0.25);
+  background: rgba(15,42,68,0.5);
+  transform: translateY(-2px);
+}
+.problem-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.problem-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--white-dim);
+  font-style: italic;
+}
+.problem-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.problem-answer {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--white);
+}
+.problem-answer em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+/* ============================================
+   SERVICE ICON WRAP + OUTCOME
+   ============================================ */
+.service-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+  background: rgba(212,175,55,0.05);
+  transition: background 0.3s, border-color 0.3s;
+}
+.service-card:hover .service-icon-wrap {
+  background: rgba(212,175,55,0.12);
+  border-color: rgba(212,175,55,0.5);
+}
+.service-outcome {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+/* ============================================
+   CTA FEATURES ROW
+   ============================================ */
+.cta-features {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--white-dim);
+}
+.cta-feature-icon {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ============================================
+   FLOATING TIME COUNTER ANIMATION
+   ============================================ */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#timeSaved {
+  animation: countUp 0.5s ease forwards;
+}
+
+/* ============================================
+   SUBTLE HOVER GLOW ON WORK CARDS
+   ============================================ */
+.work-card {
+  transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s ease;
+}
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,175,55,0.15);
+}
+
+/* ============================================
+   PROCESS STEP PULSE
+   ============================================ */
+.step-num {
+  position: relative;
+}
+.step-num::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,175,55,0.15);
+  animation: stepPulse 3s ease-in-out infinite;
+}
+@keyframes stepPulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* ============================================
+   MOBILE — PROBLEM GRID
+   ============================================ */
+@media (max-width: 900px) {
+  .problems-grid { grid-template-columns: 1fr 1fr; }
+  #problem { padding: 80px 24px; }
+  .cta-features { gap: 16px; }
+}
+@media (max-width: 600px) {
+  .problems-grid { grid-template-columns: 1fr; }
+  .problem-card { padding: 20px 16px; }
+}
