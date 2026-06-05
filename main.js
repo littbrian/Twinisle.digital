@@ -190,3 +190,79 @@ if (marqueeTrack) {
     marqueeTrack.style.animationPlayState = 'running';
   });
 }
+
+
+// ── Audit Modal ──────────────────────────────
+const N8N_WEBHOOK = 'YOUR_N8N_WEBHOOK_URL_HERE';
+
+function openModal() {
+  document.getElementById('auditModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Reset form state
+  document.getElementById('modalForm').style.display = 'block';
+  document.getElementById('modalSuccess').style.display = 'none';
+  document.getElementById('auditName').value = '';
+  document.getElementById('auditPhone').value = '';
+  document.getElementById('auditService').value = '';
+  const btn = document.getElementById('auditSubmit');
+  btn.disabled = false;
+  btn.textContent = 'Book My Free Audit';
+}
+
+function closeModal() {
+  document.getElementById('auditModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+async function submitAudit() {
+  const name    = document.getElementById('auditName').value.trim();
+  const phone   = document.getElementById('auditPhone').value.trim();
+  const service = document.getElementById('auditService').value;
+
+  if (!name || !phone || !service) {
+    alert('Please fill in all fields.');
+    return;
+  }
+
+  const btn = document.getElementById('auditSubmit');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    await fetch(N8N_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, service, source: 'twinisle.digital' })
+    });
+    document.getElementById('modalForm').style.display = 'none';
+    document.getElementById('modalSuccess').style.display = 'block';
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Book My Free Audit';
+    alert('Something went wrong. Please try again.');
+  }
+}
+
+// Close on overlay click
+document.getElementById('auditModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// Close on escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+
+// ── Wire all CTA buttons to open modal ──
+document.querySelectorAll('a[href="#cta"], .nav-cta, .btn-primary').forEach(btn => {
+  if (btn.textContent.toLowerCase().includes('audit') ||
+      btn.closest('nav') ||
+      btn.closest('#cta')) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+  }
+});
