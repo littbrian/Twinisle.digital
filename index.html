@@ -509,6 +509,78 @@
   </div>
 </footer>
 
+  <!-- ── AUDIT MODAL ── -->
+<div class="modal-overlay" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+
+    <div class="modal-logo">
+      <div class="modal-logo-name">TwinIsle Digital</div>
+      <div class="modal-logo-sub">Free AI Audit</div>
+      <div class="modal-gold-line"></div>
+    </div>
+
+    <div id="modalForm">
+      <h2 class="modal-title" id="modalTitle">Book your free<br><em>30-minute AI Audit</em></h2>
+      <p class="modal-sub">We'll map out exactly what we'd automate first for your business. No cost. No obligation.</p>
+
+      <div class="modal-field">
+        <label for="auditName">Your Name</label>
+        <input type="text" id="auditName" placeholder="e.g. Marcus Williams" autocomplete="name">
+      </div>
+
+      <div class="modal-field">
+        <label for="auditPhone">WhatsApp Number</label>
+        <input type="tel" id="auditPhone" placeholder="e.g. 868 123 4567" autocomplete="tel">
+      </div>
+
+      <div class="modal-field">
+        <label for="auditService">Type of Business</label>
+        <select id="auditService">
+          <option value="" disabled selected>Select your industry</option>
+          <option value="Food & Catering">Food & Catering</option>
+          <option value="Real Estate">Real Estate</option>
+          <option value="Salon & Beauty">Salon & Beauty</option>
+          <option value="Contracting & Trades">Contracting & Trades</option>
+          <option value="Retail">Retail</option>
+          <option value="Medical & Dental">Medical & Dental</option>
+          <option value="Insurance">Insurance</option>
+          <option value="Education & Tutoring">Education & Tutoring</option>
+          <option value="Events & Entertainment">Events & Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button class="modal-btn" id="auditSubmit" onclick="submitAudit()">
+        Book My Free Audit
+      </button>
+
+      <p class="modal-privacy">
+        Your details are only used to contact you about your audit.
+      </p>
+    </div>
+
+    <div class="modal-success" id="modalSuccess">
+      <div class="modal-success-icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="#D4AF37" stroke-width="2" fill="rgba(212,175,55,0.1)"/>
+          <path d="M20 32l9 9 15-15" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 class="modal-success-title">You're booked in!</h2>
+      <p class="modal-success-msg">
+        Check your WhatsApp — you'll hear from us
+        <strong style="color:#D4AF37">within 60 seconds.</strong>
+        <br><br>
+        We look forward to showing you what's possible for your business.
+      </p>
+      <button class="modal-btn" onclick="closeModal()" style="margin-top:24px">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+  
 <script src="main.js"></script>
 </body>
 </html>
