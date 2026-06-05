@@ -1297,3 +1297,167 @@ footer {
   .testimonial-card { padding: 28px 20px; }
   .problems-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================
+   AUDIT MODAL
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(6,15,26,0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-card {
+  background: #0F2A44;
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 24px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  transform: translateY(32px);
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(247,244,238,0.06);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-overlay.open .modal-card {
+  transform: translateY(0);
+}
+.modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none; border: none;
+  color: rgba(247,244,238,0.4);
+  font-size: 28px; line-height: 1;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 4px 8px;
+}
+.modal-close:hover { color: var(--white); }
+
+.modal-logo {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.modal-logo-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--white); letter-spacing: 0.02em;
+}
+.modal-logo-sub {
+  font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold); margin-top: 4px;
+}
+.modal-gold-line {
+  width: 48px; height: 2px;
+  background: var(--gold);
+  margin: 10px auto 0;
+}
+.modal-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700; line-height: 1.2;
+  color: var(--white); margin-bottom: 12px;
+}
+.modal-title em {
+  font-style: normal; color: var(--gold);
+}
+.modal-sub {
+  font-size: 14px; color: var(--white-dim);
+  line-height: 1.6; margin-bottom: 28px;
+}
+.modal-field {
+  margin-bottom: 18px;
+}
+.modal-field label {
+  display: block;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.modal-field input,
+.modal-field select {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(6,15,26,0.6);
+  border: 1px solid rgba(247,244,238,0.1);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.modal-field input:focus,
+.modal-field select:focus {
+  outline: none;
+  border-color: rgba(212,175,55,0.5);
+}
+.modal-field input::placeholder { color: rgba(247,244,238,0.25); }
+.modal-field select option { background: #0F2A44; color: var(--white); }
+
+.modal-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  border: none; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  cursor: pointer; margin-top: 8px;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.modal-btn:hover {
+  background: var(--gold-light);
+  box-shadow: 0 0 28px rgba(212,175,55,0.3);
+  transform: translateY(-2px);
+}
+.modal-btn:active { transform: translateY(0); }
+.modal-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.modal-privacy {
+  font-size: 11px; color: rgba(247,244,238,0.3);
+  text-align: center; margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* Success state */
+.modal-success {
+  display: none;
+  text-align: center;
+  padding: 16px 0;
+}
+.modal-success-icon { margin-bottom: 20px; }
+.modal-success-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--white); margin-bottom: 16px;
+}
+.modal-success-msg {
+  font-size: 15px; color: var(--white-dim);
+  line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .modal-card { padding: 36px 24px; }
+  .modal-title { font-size: 24px; }
+}
