@@ -193,7 +193,7 @@ if (marqueeTrack) {
 
 
 // ── Audit Modal ──────────────────────────────
-const N8N_WEBHOOK = 'YOUR_N8N_WEBHOOK_URL_HERE';
+const N8N_WEBHOOK = 'http://157.230.52.244:5678/webhook/lead-capture';
 
 function openModal() {
   document.getElementById('auditModal').classList.add('open');
