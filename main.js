@@ -2,10 +2,8 @@
    TwinIsle Digital — main.js
    ============================================================ */
 
-
-// ── Audit Modal ──────────────────────────────
+// ── Audit Modal Webhook ───────────────────────────────────────
 const N8N_WEBHOOK = 'https://n8n.twinisle.digital/webhook/lead-capture';
-
 
 // ── Custom cursor (desktop only) ──────────────────────────────
 const isTouchDevice = window.matchMedia('(hover: none)').matches;
@@ -99,7 +97,10 @@ if ('IntersectionObserver' in window) {
 // ── Smooth scroll with offset ─────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
-    const target = document.querySelector(anchor.getAttribute('href'));
+    const href = anchor.getAttribute('href');
+    // Skip modal-triggering links
+    if (href === '#cta' && anchor.classList.contains('btn-primary')) return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = 80;
@@ -196,13 +197,10 @@ if (marqueeTrack) {
   });
 }
 
-
-
-
+// ── Audit Modal ───────────────────────────────────────────────
 function openModal() {
   document.getElementById('auditModal').classList.add('open');
   document.body.style.overflow = 'hidden';
-  // Reset form state
   document.getElementById('modalForm').style.display = 'block';
   document.getElementById('modalSuccess').style.display = 'none';
   document.getElementById('auditName').value = '';
@@ -259,7 +257,7 @@ document.addEventListener('keydown', function(e) {
 
 document.getElementById('modalClose').addEventListener('click', closeModal);
 
-// ── Wire all CTA buttons to open modal ──
+// ── Wire all CTA buttons to open modal ────────────────────────
 document.querySelectorAll('a[href="#cta"], .nav-cta, .btn-primary').forEach(btn => {
   if (btn.textContent.toLowerCase().includes('audit') ||
       btn.closest('nav') ||
