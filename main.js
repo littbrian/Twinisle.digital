@@ -2,7 +2,10 @@
    TwinIsle Digital — main.js
    ============================================================ */
 
+
+// ── Audit Modal ──────────────────────────────
 const N8N_WEBHOOK = 'https://n8n.twinisle.digital/webhook/lead-capture';
+
 
 // ── Custom cursor (desktop only) ──────────────────────────────
 const isTouchDevice = window.matchMedia('(hover: none)').matches;
@@ -194,8 +197,7 @@ if (marqueeTrack) {
 }
 
 
-// ── Audit Modal ──────────────────────────────
-const N8N_WEBHOOK = 'http://157.230.52.244:5678/webhook/lead-capture';
+
 
 function openModal() {
   document.getElementById('auditModal').classList.add('open');
