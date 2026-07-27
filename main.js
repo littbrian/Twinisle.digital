@@ -2,6 +2,8 @@
    TwinIsle Digital — main.js
    ============================================================ */
 
+const N8N_WEBHOOK = 'https://n8n.twinisle.digital/webhook/lead-capture';
+
 // ── Custom cursor (desktop only) ──────────────────────────────
 const isTouchDevice = window.matchMedia('(hover: none)').matches;
 if (!isTouchDevice) {
